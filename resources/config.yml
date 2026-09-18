@@ -1,0 +1,69 @@
+# =====================================================================
+#  AquaDiscordSRV - config.yml
+#
+#  A DiscordSRV-style bridge between Aquamarine and Discord.
+#
+#  Setup is the same as DiscordSRV's "Initial Setup" guide:
+#   Toturial: 
+# =====================================================================
+
+# Master switch. Everything is inert while this is false.
+Enabled: false
+
+# Your bot's token from the Discord Developer Portal (Bot tab -> Reset Token).
+# Keep this secret - anyone with it fully controls your bot.
+BotToken: ""
+
+Channels:
+  # Discord channel ID that mirrors in-game chat (DiscordSRV calls this "global").
+  Chat: "000000000000000000"
+  # Optional: a channel where messages typed IN DISCORD are executed as
+  # console commands. Leave blank to disable. See ConsoleCommandExecution below.
+  Console: ""
+  # Optional: where join/leave/death/start/stop status messages are sent.
+  # Leave blank to reuse Channels.Chat.
+  Status: ""
+
+# Optional Discord webhook URL (Channel Settings -> Integrations -> Webhooks).
+# If set, outgoing chat messages are sent through the webhook using the player's
+# name as the sender (like DiscordSRV's "chat as the player" look), with the
+# webhook's own configured avatar. If blank, messages are sent as the bot instead.
+WebhookUrl: ""
+
+# Optional: URL of a standalone aquadiscordsrv-skin-render service (see its own README)
+# that renders each player's ACTUAL Bedrock skin into a face image for the webhook avatar.
+# Leave blank to skip this - the webhook avatar then falls back to a generic Java-skin
+# lookup (minotar.net) keyed by username, which often won't match a Bedrock player's real
+# skin. If this URL is set but unreachable or errors, the plugin silently falls back to
+# minotar.net for that player rather than failing.
+SkinRenderUrl: ""
+# Must match the API_KEY the skin-render service was started with, if it set one.
+SkinRenderApiKey: ""
+
+# How often (in seconds) to poll Discord for new messages to relay into
+# the game. Aquamarine's plugin API has no persistent Discord Gateway
+# connection available to plugins, so this uses REST polling instead of
+# a live websocket - keep this at 3-10s to stay well within rate limits.
+PollIntervalSeconds: 5
+
+# Bot/webhook messages are ignored by the poller by default, to avoid
+# echoing the bridge's own messages back into the game.
+IgnoreBotMessages: true
+
+# DANGEROUS if Channels.Console is a public/unmoderated channel:
+# when true, every message posted in Channels.Console is executed
+# verbatim as a server console command. Only enable this if that
+# channel is restricted to trusted staff.
+ConsoleCommandExecution: false
+
+# Message templates. Placeholders: {player} {message} {world} {online} {max} {deathmessage}
+# Note: Chat is only used when WebhookUrl above is blank (bot-mode). When a webhook is set,
+# Discord already shows the player's name/skin as the sender, so the raw message is sent as-is.
+Formats:
+  Chat: "**{player}**: {message}"
+  Join: ":green_circle: **{player}** joined the game."
+  Leave: ":red_circle: **{player}** left the game."
+  Death: ":skull: {deathmessage}"
+  # Used for the in-game line shown when a Discord message is relayed in.
+  # Minecraft colour codes (using & instead of the section sign) are allowed.
+  DiscordToGame: "&9[Discord] &b{player}&f: {message}"
