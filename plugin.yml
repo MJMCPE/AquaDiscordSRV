@@ -1,0 +1,20 @@
+name: AquaDiscordSRV
+main: aquadiscordsrv\Main
+version: 1.0.0
+api: 3.0.1
+description: A DiscordSRV-style Discord <-> Minecraft chat bridge for Aquamarine.
+author: MarkJesterMCPE
+website: https://github.com/
+load: POSTWORLD
+
+commands:
+  discordsrv:
+    description: Manage the AquaDiscordSRV bridge
+    usage: "/discordsrv <reload|status>"
+    aliases: [discord, adsrv]
+    permission: aquadiscordsrv.command
+
+permissions:
+  aquadiscordsrv.command:
+    description: Allows use of /discordsrv
+    default: op
