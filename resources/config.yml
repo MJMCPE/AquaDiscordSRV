@@ -30,7 +30,7 @@ Channels:
 # webhook's own configured avatar. If blank, messages are sent as the bot instead.
 WebhookUrl: ""
 
-# Optional: URL of a standalone aquadiscordsrv-skin-render service (see its own README)
+# Optional: URL of a standalone aquadiscordsrv-skin-render service (check my YT channel: @markjestermcbe)
 # that renders each player's ACTUAL Bedrock skin into a face image for the webhook avatar.
 # Leave blank to skip this - the webhook avatar then falls back to a generic Java-skin
 # lookup (minotar.net) keyed by username, which often won't match a Bedrock player's real
