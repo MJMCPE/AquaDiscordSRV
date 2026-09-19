@@ -5,8 +5,15 @@
 [![Stars](https://img.shields.io/github/stars/MJMCPE/AquaDiscordSRV?style=flat&color=0E9C8F)](https://github.com/MJMCPE/AquaDiscordSRV/stargazers)
 [![Issues](https://img.shields.io/github/issues/MJMCPE/AquaDiscordSRV?style=flat&color=5865F2)](https://github.com/MJMCPE/AquaDiscordSRV/issues)
 ![Platform](https://img.shields.io/badge/platform-Aquamarine%20(API%203.0.1)-0E9C8F)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.gg/JtX2PQtn54)
 
 A Discord ⇄ Minecraft chat bridge for **Aquamarine**, inspired by [DiscordSRV](https://github.com/DiscordSRV/DiscordSRV) - built from scratch for Aquamarine's own plugin API rather than a direct port, since PHP and Java don't exactly share code.
+
+## Community
+
+[![Discord Banner](https://dcbadge.limes.pink/api/server/JtX2PQtn54?style=flat)](https://discord.gg/JtX2PQtn54)
+
+Questions, bugs, or just want to see it running live → [discord.gg/JtX2PQtn54](https://discord.gg/JtX2PQtn54)
 
 ## What is AquaDiscordSRV?
 
