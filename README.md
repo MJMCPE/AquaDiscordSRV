@@ -28,7 +28,7 @@ DiscordSRV runs on a full Discord Gateway (WebSocket) connection with a live mem
 - Optional console log relay to a Discord channel, and (off by default) executing messages from that channel as console commands
 - `/discordsrv reload` and `/discordsrv status`
 
-## Not included, on purpose
+## Limitations
 
 A few DiscordSRV staples need that persistent Gateway connection and member cache to work at all, so rather than half-build them, they're left out for now:
 
