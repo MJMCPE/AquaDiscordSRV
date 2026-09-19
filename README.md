@@ -6,7 +6,7 @@
 [![Issues](https://img.shields.io/github/issues/MJMCPE/AquaDiscordSRV?style=flat&color=5865F2)](https://github.com/MJMCPE/AquaDiscordSRV/issues)
 ![Platform](https://img.shields.io/badge/platform-Aquamarine%20(API%203.0.1)-0E9C8F)
 
-A Discord ⇄ Minecraft chat bridge for **Aquamarine**, inspired by [DiscordSRV](https://github.com/DiscordSRV/DiscordSRV) - built from scratch against Aquamarine's own plugin API rather than ported line-for-line, since the two platforms don't share much under the hood.
+A Discord ⇄ Minecraft chat bridge for **Aquamarine**, inspired by [DiscordSRV](https://github.com/DiscordSRV/DiscordSRV) - built from scratch for Aquamarine's own plugin API rather than a direct port, since PHP and Java don't exactly share code.
 
 ## What is AquaDiscordSRV?
 
